@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="maui2.PicMenu"
+             Title="PicMenu">
+    <ScrollView>
+        <VerticalStackLayout>
+
+            <Grid HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+                <StackLayout   Grid.Row="0" Orientation="Horizontal">
+                    <Border   MaximumWidthRequest="200"  Stroke="Gray" BackgroundColor="#e1e1e1">
+                        <StackLayout   Orientation="Vertical">
+                            <ImageButton
+                    Source="person.svg" x:Name="Image1" MaximumHeightRequest="200"
+                    SemanticProperties.Description="About application!"     Clicked="About_Clicked"
+                      />
+                            <Label Text="О Авторе"/>
+                        </StackLayout>
+                    </Border>
+                    <Border  WidthRequest="170"  Stroke="Gray" BackgroundColor="#e1e1e1">
+                        <StackLayout   Orientation="Vertical">
+                            <ImageButton 
+                    Source="playbutton.svg" x:Name="Image2"
+                    SemanticProperties.Description="Music"
+                            Clicked="Music_Clicked"
+                    Aspect="Fill" />
+                            <Label VerticalOptions="EndAndExpand" Text="Медиа плеер"/>
+                        </StackLayout>
+                    </Border>
+                </StackLayout>
+                <StackLayout Grid.Row="1"   VerticalOptions="EndAndExpand" HorizontalOptions="FillAndExpand"  Orientation="Horizontal">
+
+                    <Border MaximumWidthRequest='200'  Stroke="Gray" BackgroundColor="#e1e1e1">
+                        <StackLayout   Orientation="Vertical">
+                            <ImageButton  MaximumHeightRequest="200"
+                    Source="discrete.svg" x:Name="Image3" Clicked="Graphic_Clicked"
+                    SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                    Aspect="Fill" />
+                            <Label VerticalOptions="End" Text="График"/>
+
+                        </StackLayout>
+                    </Border>
+                    <Border  WidthRequest="170"  Stroke="Gray" BackgroundColor="#e1e1e1">
+                        <StackLayout   Orientation="Vertical">
+                            <ImageButton 
+                    Source="vscode.svg" x:Name="Image4"
+                    SemanticProperties.Description="Music"
+                            Clicked="AboutApp_Clicked"
+                    Aspect="Center"/>
+                            <Label VerticalOptions="EndAndExpand" Text="О приложении"/>
+                        </StackLayout>
+                    </Border>
+                </StackLayout>
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

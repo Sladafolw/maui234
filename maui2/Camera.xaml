@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="maui2.CameraM"
+             Title="Camera" >
+    <ScrollView>
+        <VerticalStackLayout Spacing="25" VerticalOptions="Center">
+
+           
+        
+            <Button
+                Clicked="OnPickPhotoClicked"
+                HorizontalOptions="Center"
+                Text="Pick photo" />
+
+            <Button
+                Clicked="OnTakePhotoClicked"
+                HorizontalOptions="Center"
+                Text="Take photo" />
+
+            <Image
+                x:Name="UploadedOrSelectedImage"
+                HorizontalOptions="Center"
+                SemanticProperties.Description=""
+                Source=" "  />
+
+            <Label x:Name="FileSizeLabel" HorizontalOptions="Center" />
+
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

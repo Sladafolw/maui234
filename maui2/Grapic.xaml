@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="maui2.Grapic"
+            xmlns:local="clr-namespace:_2DGraphicsDrawing">
+    <ContentPage.Resources>
+        <local:GraphicsDrawable x:Key="drawable"/>
+    </ContentPage.Resources>
+    <ScrollView>
+        <VerticalStackLayout>
+            <Grid x:Name="MyGrid">
+            </Grid>
+
+            <Grid x:Name="MyGrid2">
+                <StackLayout Grid.Row="2">
+                    <Label   Text="ax^2+bx+c =0" />
+                    <Label x:Name="Result"  IsVisible="false" Text="" />
+                    <Editor x:Name="a" Keyboard="Numeric" Placeholder="Enter a"
+        HeightRequest="50"/>
+                    <Editor x:Name="b"  Keyboard="Numeric" Placeholder="Enter b" HeightRequest="50"/>
+                    <Editor x:Name="c"   Keyboard="Numeric" Placeholder="Enter c" HeightRequest="50"/>
+                    <Button  Text="Calculate" Clicked="Button_Clicked" />
+                </StackLayout>
+            </Grid>
+        </VerticalStackLayout>
+
+    </ScrollView>
+</ContentPage>

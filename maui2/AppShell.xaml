@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+     x:Class="maui2.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:maui2"
+   
+    Shell.FlyoutBehavior="Flyout"
+    FlyoutIcon="dotnet_bot.png">
+
+
+    <Shell.FlyoutHeader>
+        <Border BackgroundColor="#ddd"
+                StrokeThickness="0">
+            <Grid ColumnDefinitions="Auto, *"
+                    Padding="25"
+                  ColumnSpacing="20">
+                <Image Grid.Column="0"
+                Source="dotnet_bot.png"
+                   Aspect="AspectFill"
+                   HeightRequest="50"
+                   WidthRequest="50"/>
+
+                <Label Grid.Column="1"
+                   Text="Slava Petlitsky"
+                   VerticalTextAlignment="Center"
+                   FontSize="28"
+                   FontAttributes="Bold"
+                   TextColor="#333333"/>
+            </Grid>
+        </Border>
+    </Shell.FlyoutHeader>
+
+    <Shell.FlyoutFooter>
+        <Label Text="Copyright | Slava Petlitsky"
+               BackgroundColor="AliceBlue"
+               HorizontalTextAlignment="Center"
+               Padding="0, 10"/>
+    </Shell.FlyoutFooter>
+
+  
+    <FlyoutItem FlyoutDisplayOptions="AsMultipleItems" Route="ParentRoute">
+        <ShellContent
+            Title="Home"   
+            ContentTemplate="{DataTemplate local:MainPage}"
+            Route="MainPage" />
+
+        <ShellContent
+            Title="Graphic"
+            Icon="vscode.svg"  
+            ContentTemplate="{DataTemplate local:Grapic}"
+            Route="Grapic" />
+
+        <ShellContent
+            Icon="dotnet_bot.png"
+            Title="Pic Menu"
+             ContentTemplate="{DataTemplate local:PicMenu }"
+            Route="PicMenu" />
+
+        <ShellContent
+            Title="AboutApp"   Icon="vscode.svg"  
+           ContentTemplate="{DataTemplate local:AboutApp}"
+            Route="AboutApp" />
+
+        <ShellContent
+            Title="Music"    Icon="playbutton.svg"  
+            ContentTemplate="{DataTemplate local:Music}"
+            Route="Music" />
+        <ShellContent
+            Title="Media"    Icon="playbutton.svg"  
+            ContentTemplate="{DataTemplate local:Media}"
+            Route="Media" />
+        <ShellContent
+            Title="Camera"   
+            ContentTemplate="{DataTemplate local:CameraM}"
+            Route="Camera" />
+    </FlyoutItem>
+</Shell>
